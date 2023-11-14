@@ -6,8 +6,14 @@
   </head>
   <body>
     <a-scene>
-    <a-sky color="#ECECEC"></a-sky>
-    <a-entity gltf-model = "url(/dust2.glb)" position = "0 0 0" scale = "0.1 0.1 0.1"></a-entity>
+    <a-entity light="type: ambient; color: #EEE1A8; intensity: 1" castShadow = true position="5 3 5"></a-entity>
+    <a-entity light="type: directional;
+                   castShadow: true;
+                   intensity: 0.6;"
+            position="-5 3 1.5"></a-entity>
+    <a-sky color="#A8DFEE"></a-sky>
+    <a-entity camera wasd-controls look-controls position="-13 2 -13"></a-entity>
+    <a-entity gltf-model = "url(/dust2.glb)" rotation="0 90 0" position = "0 0 -29" scale = "0.1 0.1 0.1"></a-entity>
     </a-scene>
       <script src = "script.js"> </script>
   </body>
